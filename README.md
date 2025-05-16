@@ -11,7 +11,7 @@ A simple Python program that detects basic geometric shapes (Triangle, Square, R
 
 ## 📸 Example
 
-### Input Image (`test.png`)
+### ![Example](test.png)
 The program reads an image and detects shapes like:
 
 ![Example](output.png)
@@ -29,3 +29,16 @@ Install dependencies with:
 
 ```bash
 pip install opencv-python numpy
+```
+
+🧠 How It Works
+
+- Converts the image to grayscale.
+- Applies Gaussian Blur to reduce noise.
+- Uses Canny edge detection to find edges.
+- Finds contours in the image.
+- Approximates contours to polygons.
+- Classifies shapes based on:
+    Number of polygon vertices
+    Aspect ratio (for rectangles vs squares)
+Draws contours and labels the detected shapes.
